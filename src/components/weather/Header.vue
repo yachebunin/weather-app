@@ -7,8 +7,8 @@
       <span class="date">{{ location.localtime }}</span>
     </div>
     <div class="search">
-      <input type="text" />
-      <button>поиск</button>
+      <input type="text" v-model="locationData" @keyup.enter="search" />
+      <button @click="search">поиск</button>
     </div>
   </div>
 </template>
@@ -18,6 +18,18 @@ export default {
   name: "WeatherHeader",
   props: {
     location: Object,
+  },
+  data() {
+    return {
+      locationData: "",
+    };
+  },
+  methods: {
+    search() {
+      this.locationData && this.$emit("search", this.locationData);
+
+      this.locationData = "";
+    },
   },
 };
 </script>

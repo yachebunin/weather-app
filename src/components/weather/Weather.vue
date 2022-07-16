@@ -1,6 +1,6 @@
 <template>
   <div class="weather" v-if="weatherData">
-    <Header :location="weatherData.location" />
+    <Header :location="weatherData.location" @search="getWeather" />
     <Body :current="weatherData.current" />
   </div>
 </template>
@@ -27,7 +27,6 @@ export default {
       let json = await response.json();
 
       this.weatherData = json;
-      console.log("weatherData: ", this.weatherData); // убрать
     },
   },
   components: {
