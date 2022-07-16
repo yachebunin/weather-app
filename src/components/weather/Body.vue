@@ -54,7 +54,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 70%;
+    max-width: 300px;
     font-size: 1.2em;
     line-height: 1.5em;
   }

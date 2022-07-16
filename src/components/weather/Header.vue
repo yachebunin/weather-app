@@ -68,18 +68,17 @@ export default {
       border: 0px;
       background: #fff;
       color: #000;
+      cursor: pointer;
     }
 
     button:hover {
       background: rgb(90, 101, 251);
       color: #fff;
-      cursor: pointer;
     }
 
     button:active {
       background: rgb(251, 171, 90);
       color: #fff;
-      cursor: pointer;
     }
   }
 }

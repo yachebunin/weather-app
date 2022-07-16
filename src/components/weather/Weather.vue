@@ -45,12 +45,8 @@ export default {
 
 <style scoped lang="scss">
 .weather {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
-  height: 40%;
+  min-width: 30vw;
+  min-height: 40vh;
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
