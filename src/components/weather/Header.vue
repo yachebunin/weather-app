@@ -26,6 +26,7 @@ export default {
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
   .info {
     display: flex;
     flex-direction: column;
