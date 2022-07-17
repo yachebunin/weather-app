@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <Menu />
+
     <router-view
       v-if="weatherData"
       :weatherData="weatherData"
       @search="getWeather"
     ></router-view>
+
+    <Loader v-if="isLoading" />
   </div>
 </template>
 
 <script>
 import Menu from "./components/Menu.vue";
+import Loader from "./components/Loader.vue";
 
 export default {
   name: "App",
@@ -22,6 +26,7 @@ export default {
   },
   components: {
     Menu,
+    Loader,
   },
   created() {
     this.getWeather();
@@ -33,9 +38,14 @@ export default {
       let response = await fetch(
         `http://api.weatherapi.com/v1/forecast.json?key=62cb304421ff4c07954121946221607&q=${location}&days=7&lang=ru`
       );
-      let json = await response.json();
 
-      this.weatherData = json;
+      if (response.ok) {
+        let json = await response.json();
+        this.weatherData = json;
+      } else {
+        this.getWeather();
+      }
+
       this.isLoading = false;
     },
   },

@@ -22,6 +22,5 @@ export default {
 .list {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
 }
 </style>

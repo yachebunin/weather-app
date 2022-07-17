@@ -6,7 +6,7 @@
       <div class="degrees">+ {{ data.day.avgtemp_c }}</div>
       <div class="text">{{ data.day.condition.text }}</div>
     </div>
-    <div>Влажность: {{ data.day.avghumidity }}</div>
+    <div class="humidity">Влажность: {{ data.day.avghumidity }}</div>
     <div>Дождь: {{ data.day.daily_chance_of_rain }}%</div>
     <div>Ветер: {{ Math.round(data.day.avgvis_km / 3.6) }}м/с</div>
   </div>
@@ -37,6 +37,7 @@ export default {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+    text-align: center;
 
     img {
       margin-bottom: 5px;
@@ -45,6 +46,14 @@ export default {
     .degrees {
       font-size: 1.5em;
     }
+
+    .text {
+      font-size: 0.8em;
+    }
+  }
+
+  .humidity {
+    margin-top: auto;
   }
 }
 </style>
