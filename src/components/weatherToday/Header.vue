@@ -63,23 +63,6 @@ export default {
       outline: 0;
       outline-offset: 0;
     }
-
-    button {
-      border: 0px;
-      background: #fff;
-      color: #000;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: rgb(90, 101, 251);
-      color: #fff;
-    }
-
-    button:active {
-      background: rgb(251, 171, 90);
-      color: #fff;
-    }
   }
 }
 </style>

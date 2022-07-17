@@ -46,7 +46,9 @@ export default {
     }
 
     .text {
+      max-width: 70%;
       font-size: 1.2em;
+      text-align: center;
     }
   }
 
